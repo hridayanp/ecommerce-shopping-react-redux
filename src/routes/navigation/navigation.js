@@ -13,8 +13,8 @@ export const Navigation = () => {
 
                 <div className="nav-links-container">
                     <Link to="/shop" className="nav-link">SHOP</Link>
-                    <Link to="/" className="nav-link">SHOP</Link>
-                    <Link to="/" className="nav-link">SHOP</Link>
+                    <Link to="/contact" className="nav-link">CONTACT</Link>
+                    <Link to="/signin" className="nav-link">SIGN IN</Link>
                 </div>
             </div>
             <Outlet />

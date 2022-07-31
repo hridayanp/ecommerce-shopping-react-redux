@@ -10,7 +10,6 @@ import {
   createUserDocFromAuth,
   onAuthStateChangedListener,
 } from './utils/firebase/firebase.utils';
-import { setCurrentUser } from './store/user/user.action';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -21,7 +20,7 @@ const App = () => {
         createUserDocFromAuth(user);
       }
       dispatch({
-        type: 'SET_CURRENT_USER',
+        type: 'user/SET_CURRENT_USER',
         payload: user,
       });
     });

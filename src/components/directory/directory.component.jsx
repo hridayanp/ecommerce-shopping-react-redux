@@ -1,40 +1,41 @@
-import { DirectoryItem } from '../directory-item/directory-item';
+import DirectoryItem from '../directory-item/directory-item.component';
+
 import { DirectoryContainer } from './directory.styles';
 
 const categories = [
   {
     id: 1,
-    title: 'Hats',
+    title: 'hats',
     imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
-    linkUrl: 'shop/hats',
+    route: 'shop/hats',
   },
   {
     id: 2,
-    title: 'Jackets',
+    title: 'jackets',
     imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
-    linkUrl: 'shop/jackets',
+    route: 'shop/jackets',
   },
   {
     id: 3,
-    title: 'Sneakers',
+    title: 'sneakers',
     imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
-    linkUrl: 'shop/sneakers',
+    route: 'shop/sneakers',
   },
   {
     id: 4,
-    title: 'Women',
+    title: 'womens',
     imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
-    linkUrl: 'shop/womens'
+    route: 'shop/womens',
   },
   {
     id: 5,
-    title: 'Men',
+    title: 'mens',
     imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
-    linkUrl: 'shop/mens'
+    route: 'shop/mens',
   },
 ];
 
-export const Directory = () => {
+const Directory = () => {
   return (
     <DirectoryContainer>
       {categories.map((category) => (
@@ -44,3 +45,4 @@ export const Directory = () => {
   );
 };
 
+export default Directory;

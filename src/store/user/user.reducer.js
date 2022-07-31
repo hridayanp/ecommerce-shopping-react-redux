@@ -1,22 +1,16 @@
-import { USER_ACTION_TYPES } from "./user.types";
+import { USER_ACTION_TYPES } from './user.types';
 
-// reducer logic
-export const USER_INITIAL_STATE = {
-    currentUser: null,
+const INITIAL_STATE = {
+  currentUser: null,
 };
 
+export const userReducer = (state = INITIAL_STATE, action) => {
+  const { type, payload } = action;
 
-export const userReducer = (state = USER_INITIAL_STATE, action = {}) => {
-    const { type, payload } = action;
-    // if (type === undefined) return state;
-
-
-    switch (type) {
-        case USER_ACTION_TYPES.SET_CURRENT_USER:
-            return { ...state, currentUser: payload };
-        default:
-            return state;
-    }
-
-
+  switch (type) {
+    case USER_ACTION_TYPES.SET_CURRENT_USER:
+      return { ...state, currentUser: payload };
+    default:
+      return state;
+  }
 };

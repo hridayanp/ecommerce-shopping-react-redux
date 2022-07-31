@@ -4,9 +4,9 @@ import {
 import { CATEGORIES_ACTION_TYPES } from "./category.types";
 
 
-export const setCategoriesMap = (categoriesMap) => {
+export const setCategoriesMap = (categoriesArray) => {
     createAction(
         CATEGORIES_ACTION_TYPES.SET_CATEGORIES_MAP,
-        categoriesMap
+        categoriesArray
     );
 };

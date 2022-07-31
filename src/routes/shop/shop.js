@@ -10,10 +10,11 @@ export const Shop = () => {
 
     useEffect(() => {
         const getCategories = async () => {
-            const categoryMap = await getCategoriesAndDocuments('categories');
+            const categoriesArray = await getCategoriesAndDocuments('categories');
+
             dispatch({
-                type: 'category/SET_CATEGORIES_MAP',
-                payload: categoryMap,
+                type: 'category/SET_CATEGORIES',
+                payload: categoriesArray,
             })
         };
         getCategories();
